@@ -1,0 +1,44 @@
+{% extends "morphan/header.html" %}
+
+{% block textarea %}
+<div class='container-fluid'>
+	<form method="post">
+		{% csrf_token %}
+		{{ form.as_p }}									
+		<button class="btn btn-default" type="submit">Analizar</button>
+	</form>
+</div>
+{% endblock %}
+
+{% block message %}
+<div class='container-fluid'>	
+	<table class="scroll">
+		<thead>
+			<tr>
+				<th>Palabra</th>
+				<th>Lema</th>
+                <th>Etiqueta</th>
+				<th>Probabilidad</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for item in text %}
+			<tr>
+				<td style="font-weight: bold">
+					<p>{{item.0}}</p>
+				</td>
+				<td style="color: blue">
+					<p>{{item.1}}</p>
+				</td>
+				<td style="color: red">
+					<p>{{item.2}}</p>
+				</td>
+				<td style="color: grey">
+					<p>{{item.3}}</p>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endblock %}
