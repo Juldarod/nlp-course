@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Analizador Morfológico - Twitter</title>
+	<meta charset="utf-8" />
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'probarser/css/bootstrap.min.css' %}" type = "text/css"/>
+	<meta name="viewport" content = "width=device-width, initial-scale=1">
+	
+	<style type="text/css">
+		html, body {
+            height:100%;
+            width: 99%;
+		}
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table.scroll tbody, table.scroll thead {
+            display: block;
+        }
+        table.scroll tbody {
+            height: 350px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        th, td {
+            height: 100%;
+            width: 30%;
+            text-align: justify;
+            border-bottom: 1px solid #cfddda;
+        }
+        tr:hover{
+            background-color: #b4a092
+        }
+        th:nth-child(odd){
+            background-color: #f2f2f2
+        }
+        th:nth-child(even){
+            background-color: #f2f2f2
+        }
+        p{
+            font-size: small;
+            line-height: 100%;
+            text-align: justify;
+        }
+	</style>
+</head>
+
+<body class="body" style="background-color:#f6f6f6">
+	<div class="container-fluid" style="min-height:90%; ">
+				
+		<div class="row">
+			<!-- Logo -->
+			<div class="col-sm-4">
+				<div class='container-fluid'>				  
+					<div style="text-align: center;">
+						<img src="{% static 'probarser/img/header-univalle.png' %}"
+                             class="responsive-img" style='max-height:60px;' alt="logo">
+				    </div>
+			    </div>
+			</div>
+			<!-- Título -->
+			<div class="col-sm-8">
+				<div class='container-fluid'>
+					<br>
+					<div style="text-align: center;">
+						<h2 style="font-size: 30px;">Probabilistic parsers <!--<span class="label label-info">beta</span>--></h2>
+					</div>
+				</div>
+			</div>			  
+		</div><hr>
+
+		<div class="row">
+			<!-- Texto de entrada -->			
+			<div class="col-sm-12">
+				{% block textarea %}
+				{% endblock %}
+			</div>
+		</div> 
+	</div>
+	
+	<footer>
+		<div class="container-fluid" style='margin-left:15px'>
+			<p><a href="#" target="blank">Contact</a> |
+                <a href="#" target="blank">Twitter</a>
+            </p>
+		</div>
+	</footer>
+	
+</body> 
+
+</html>
