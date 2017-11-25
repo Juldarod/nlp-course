@@ -1,6 +1,6 @@
-from . import freeling
 import time
 import re
+from morphan.freeling import freeling
 
 
 def my_maco_options(lang, lang_path):
