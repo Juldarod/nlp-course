@@ -17,16 +17,17 @@ filename = os.path.join(dirname, 'input', 'probarser', 'input_bikel.txt')
 #           + dirname + '/wsj-02-21/probarser/wsj-02-21.obj.gz \\'
 #           + dirname + '/input/probarser/input_bikel.txt')
 
-os.system('java -server -Xms400m -Xmx400m -cp '
-          + dirname + '/dbparser/probarser/dbparser.jar:'
-                      '~/pycharm-2017.2.3/lib/bootstrap.jar:'
-                      '~/pycharm-2017.2.3/lib/extensions.jar:'
-                      '~/pycharm-2017.2.3/lib/util.jar:'
-                      '~/pycharm-2017.2.3/lib/jdom.jar:'
-                      '~/pycharm-2017.2.3/lib/log4j.jar:'
-                      '~/pycharm-2017.2.3/lib/trove4j.jar:'
-                      '~/pycharm-2017.2.3/lib/jna.jar -Dparser.settingsFile='
-          + dirname + '/dbparser/probarser/settings/collins.properties danbikel.parser.Parser -is '
-          + dirname + '/wsj-02-21/probarser/wsj-02-21.obj.gz -sa '
-          + dirname + '/input/probarser/input_bikel.txt -out '
-          + dirname + '/output/probarser/output_bikel.txt')
+os.system('java -server'
+          ' -Xms400m -Xmx400m'
+          ' -cp ' + dirname + '/dbparser/probarser/dbparser.jar:'
+                              '~/pycharm-2017.2.3/lib/bootstrap.jar:'
+                              '~/pycharm-2017.2.3/lib/extensions.jar:'
+                              '~/pycharm-2017.2.3/lib/util.jar:'
+                              '~/pycharm-2017.2.3/lib/jdom.jar:'
+                              '~/pycharm-2017.2.3/lib/log4j.jar:'
+                              '~/pycharm-2017.2.3/lib/trove4j.jar:'
+                              '~/pycharm-2017.2.3/lib/jna.jar'
+          ' -Dparser.settingsFile=' + dirname + '/dbparser/probarser/settings/collins.properties'
+          ' danbikel.parser.Parser -is ' + dirname + '/wsj-02-21/probarser/wsj-02-21.obj.gz'
+          ' -sa ' + filename +
+          ' -out ' + dirname + '/output/probarser/output_bikel.txt')
