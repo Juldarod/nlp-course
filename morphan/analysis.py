@@ -5,7 +5,7 @@ from morphan.freeling.morphan import freeling
 
 def my_maco_options(lang, lang_path):
     # Create options set for maco analyzer. Default values are OK, except for data files.
-    start_time = time.clock()
+    # start_time = time.clock()
     options = freeling.maco_options(lang)
     options.PunctuationFile = lang_path + '../common/punct.dat'
     options.DictionaryFile = lang_path + 'dicc.src'
@@ -14,8 +14,8 @@ def my_maco_options(lang, lang_path):
     options.NPdataFile = lang_path + 'np.dat'
     options.QuantitiesFile = lang_path + 'quantities.dat'
     options.ProbabilityFile = lang_path + 'probabilitats.dat'
-    end_time = time.clock()
-    print('Setting options for morphological analysis: ' + '%.6f' % round(end_time - start_time, 6) + ' seconds')
+    # end_time = time.clock()
+    # print('Setting options for morphological analysis: ' + '%.6f' % round(end_time - start_time, 6) + ' seconds')
     return options
 
 
@@ -43,10 +43,10 @@ def process_sentences(ls):
 
 class Analysis(object):
     def __init__(self):
-        start_time = time.clock()
+        # start_time = time.clock()
         freeling.util_init_locale('default')
-        end_time = time.clock()
-        print('Init locale: ' + '%.6f' % round(end_time - start_time, 6) + ' seconds')
+        # end_time = time.clock()
+        # print('Init locale: ' + '%.6f' % round(end_time - start_time, 6) + ' seconds')
         lang = 'es'
         # Modify this line to be your FreeLing installation directory
         freeling_dir = '/usr/local'
@@ -57,7 +57,7 @@ class Analysis(object):
         start_time = time.clock()
         self.morpho = freeling.maco(my_maco_options(lang, data))
         end_time = time.clock()
-        print('Creating morphological analyzer: ' + '%.6f' % round(end_time - start_time, 6) + ' seconds')
+        print('Creating Spanish analyzer: ' + '%.6f' % round(end_time - start_time, 6) + ' seconds')
         # Activate morpho modules to be used in next call
         self.morpho.set_active_options(False,  # UserMap
                                        True,  # NumbersDetection,

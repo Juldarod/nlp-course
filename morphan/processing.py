@@ -101,8 +101,8 @@ class Processing(object):
         self.comma = comma
         self.mayor = mayor
 
-    def process(self, corpus, cleaned_data, analyser):
-        tokenized_text = nltk_tweet_tokenizer(cleaned_data)
+    def process(self, corpus, input_text, analyser):
+        tokenized_text = nltk_tweet_tokenizer(input_text)
         new_tokenized_text = segment_hashtag(tokenized_text, corpus)
         raw_text = get_raw_text(new_tokenized_text, self.emoticon, self.money, self.comma, self.mayor)
         analyzed_words = analyser.analyze(raw_text + '.')

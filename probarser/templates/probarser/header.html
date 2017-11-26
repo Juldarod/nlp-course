@@ -12,6 +12,7 @@
 		html, body {
             height:100%;
             width: 99%;
+            font-size: 12px;
 		}
         table {
             border-collapse: collapse;
@@ -76,6 +77,10 @@
 			<!-- Texto de entrada -->			
 			<div class="col-sm-12">
 				{% block textarea %}
+				{% endblock %}
+			</div>
+            <div class="col-sm-12">
+				{% block message %}
 				{% endblock %}
 			</div>
 		</div> 
