@@ -27,7 +27,7 @@ class HomeView(TemplateView):
             args = {'form': form,
                     'stanford': 'Stanford Parser', 'bikel': 'Bikel Parser',
                     'stanford_draws': draw_stanford(trees), 'bikel_trees': trees[1],
-                    'stanford_trees': trees[0]}
+                    'stanford_trees': zip(trees[0], draw_stanford(trees))}
             return render(request, self.template_name, args)
 
 

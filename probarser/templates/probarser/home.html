@@ -44,7 +44,6 @@
                     <div class="col-sm-6" style="text-align: center">
                         <h2>
                             {{ stanford }}
-{#                            Stanford parser#}
                         </h2>
                     </div>
                     <div class="col-sm-6" style="text-align: center">
@@ -61,10 +60,11 @@
 {#                                    <img src="{% static item %}" class="responsive-img">#}
 {#                                </div>#}
 {#                            {% endfor %}#}
-                            {% for item in stanford_trees %}
+                            {% for tree, draw in stanford_trees %}
                                 <div style="text-align: left; font-size: 12px; line-height: 16px; overflow: auto">
-                                    <pre style="padding: 0; margin: 0">{{ item }}
+                                    <pre style="padding: 0; margin: 0">{{ tree }}
                                     </pre>
+                                    <a href="localhost:8000/static/{{ draw }}" target="_blank">tree picture</a>
                                 </div>
                             {% endfor %}
                         </div>
