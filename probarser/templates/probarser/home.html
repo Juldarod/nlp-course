@@ -12,33 +12,10 @@
 
 {% load staticfiles %}
 {% block message %}
-<div class='container-fluid'>	
-{#	<table class="scroll">#}
+<div class='container-fluid'>
 		<thead>
-{#			<tr>#}
-{#				<th>Palabra</th>#}
-{#				<th>Lema</th>#}
-{#                <th>Etiqueta</th>#}
-{#				<th>Probabilidad</th>#}
-{#			</tr>#}
 		</thead>
 		<tbody>
-{#			{% for item in text %}#}
-{#			<tr>#}
-{#				<td style="font-weight: bold">#}
-{#					<p>{{item.0}}</p>#}
-{#				</td>#}
-{#				<td style="color: blue">#}
-{#					<p>{{item.1}}</p>#}
-{#				</td>#}
-{#				<td style="color: red">#}
-{#					<p>{{item.2}}</p>#}
-{#				</td>#}
-{#				<td style="color: grey">#}
-{#					<p>{{item.3}}</p>#}
-{#				</td>#}
-{#			</tr>#}
-{#			{% endfor %}#}
             <div class="container-fluid}">
                 <div class="row">
                     <div class="col-sm-6" style="text-align: center">
@@ -55,28 +32,28 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-{#                            {% for item in stanford_draws %}                                #}
-{#                                <div style="text-align: justify; overflow: auto">#}
-{#                                    <img src="{% static item %}" class="responsive-img">#}
-{#                                </div>#}
-{#                            {% endfor %}#}
-                            {% for tree, draw in stanford_trees %}
+                            {% for stree, sdraw in stanford_trees %}
                                 <div style="text-align: left; font-size: 12px; line-height: 16px; overflow: auto">
-                                    <pre style="padding: 0; margin: 0">{{ tree }}
+                                    <pre></pre>
+                                    <pre style="padding: 0; margin: 0">{{ stree }}
                                     </pre>
-                                    <a href="localhost:8000/static/{{ draw }}" target="_blank">tree picture</a>
+                                    <a href="localhost:8000/static/{{ sdraw }}" target="_blank">Tree Image</a>
                                 </div>
                             {% endfor %}
                         </div>
                         <div class="col-sm-6">
-                            <div style="text-align: justify">
-                                {{ bikel_tree }}
-                            </div>
+                            {% for btree, bdraw in bikel_trees %}
+                                <div style="text-align: left; font-size: 12px; line-height: 16px; overflow: auto">
+                                    <pre></pre>
+                                    <pre style="padding: 0; margin: 0">{{ btree }}
+                                    </pre>
+                                    <a href="localhost:8000/static/{{ bdraw }}" target="_blank">Tree Image</a>
+                                </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
             </div>
 		</tbody>
-{#	</table>#}
 </div>
 {% endblock %}

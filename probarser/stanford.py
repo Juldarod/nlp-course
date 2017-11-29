@@ -22,6 +22,4 @@ def list_to_tree(list_tree):
         new_tree.append(s[0])
     return new_tree
 
-# print(' '.join(str(stanford_tree).split()))
-# print(' '.join(str(bikel_tree).split()))
 
