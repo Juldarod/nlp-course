@@ -12,48 +12,63 @@
 
 {% load staticfiles %}
 {% block message %}
-<div class='container-fluid'>
-		<thead>
-		</thead>
-		<tbody>
-            <div class="container-fluid}">
-                <div class="row">
-                    <div class="col-sm-6" style="text-align: center">
-                        <h2>
-                            {{ stanford }}
-                        </h2>
-                    </div>
-                    <div class="col-sm-6" style="text-align: center">
-                        <h2>
-                            {{ bikel }}
-                        </h2>
-                    </div>
-                </div>
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            {% for stree, sdraw in stanford_trees %}
-                                <div style="text-align: left; font-size: 12px; line-height: 16px; overflow: auto">
-                                    <pre></pre>
-                                    <pre style="padding: 0; margin: 0">{{ stree }}
-                                    </pre>
-                                    <a href="localhost:8000/static/{{ sdraw }}" target="_blank">Tree Image</a>
-                                </div>
-                            {% endfor %}
-                        </div>
-                        <div class="col-sm-6">
-                            {% for btree, bdraw in bikel_trees %}
-                                <div style="text-align: left; font-size: 12px; line-height: 16px; overflow: auto">
-                                    <pre></pre>
-                                    <pre style="padding: 0; margin: 0">{{ btree }}
-                                    </pre>
-                                    <a href="localhost:8000/static/{{ bdraw }}" target="_blank">Tree Image</a>
-                                </div>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
+<div class="container-fluid">
+
+<br>
+<div class="row">
+    <div class="col-sm-12" style="text-align: left">
+       <h2 style="font-size: 20px">
+           {{ pos }}
+       </h2>
+    </div>
+</div>
+
+<br>
+<div class="row">
+    <div class="col-sm-12">
+        <div style="text-align: justify; line-height: 16px">
+            <pre style="padding: 0; margin: 0">{{ tagging }}
+            </pre>
+        </div>
+    </div>
+</div>
+
+<br>
+<div class="row">
+    <div class="col-sm-6" style="text-align: center">
+        <h2 style="font-size: 20px">
+            {{ stanford }}
+        </h2>
+    </div>
+    <div class="col-sm-6" style="text-align: center">
+        <h2 style="font-size: 20px">
+            {{ bikel }}
+        </h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6">
+        {% for stree, sdraw in stanford_trees %}
+            <div style="text-align: left; font-size: 14px; line-height: 16px">
+                <pre></pre>
+                <pre style="padding: 0; margin: 0">{{ stree }}
+                </pre>
+                <a href="localhost:8000/static/{{ sdraw }}" target="_blank">Tree Image</a>
             </div>
-		</tbody>
+        {% endfor %}
+    </div>
+    <div class="col-sm-6">
+        {% for btree, bdraw in bikel_trees %}
+            <div style="text-align: left; font-size: 14px; line-height: 16px">
+                <pre></pre>
+                <pre style="padding: 0; margin: 0">{{ btree }}
+                </pre>
+                <a href="localhost:8000/static/{{ bdraw }}" target="_blank">Tree Image</a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
 </div>
 {% endblock %}
