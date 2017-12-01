@@ -1,0 +1,31 @@
+
+( (S 
+    (SBAR-TMP 
+      (WHADVP-1 (WRB When) )
+      (S 
+        (NP-SBJ (PRP it) )
+        (VP (VBZ 's) 
+          (NP-PRD 
+            (NP (NN time) )
+            (PP (IN for) 
+              (NP (PRP$ their) (JJ biannual) (NN powwow) )))
+          (ADVP-TMP (-NONE- *T*-1) ))))
+    (, ,) 
+    (NP-SBJ 
+      (NP (DT the) (NN nation) (POS 's) )
+      (VBG manufacturing) (NNS titans) )
+    (ADVP (RB typically) )
+    (VP (VBP jet) 
+      (PRT (RP off) )
+      (PP-DIR (TO to) 
+        (NP 
+          (NP (DT the) (JJ sunny) (NNS confines) )
+          (PP (IN of) 
+            (NP 
+              (NP (NN resort) (NNS towns) )
+              (PP (IN like) 
+                (NP 
+                  (NP (NNP Boca) (NNP Raton) )
+                  (CC and) 
+                  (NP (NNP Hot) (NNP Springs) ))))))))
+    (. .) ))

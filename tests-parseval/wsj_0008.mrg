@@ -1,0 +1,18 @@
+
+( (S 
+    (NP-SBJ (DT The) (JJ federal) (NN government) )
+    (VP (VBD suspended) 
+      (NP 
+        (NP (NNS sales) )
+        (PP (IN of) 
+          (NP (NNP U.S.) (NNS savings) (NNS bonds) )))
+      (SBAR-PRP (IN because) 
+        (S 
+          (NP-SBJ (NNP Congress) )
+          (VP (VBZ has) (RB n't) 
+            (VP (VBN lifted) 
+              (NP 
+                (NP (DT the) (NN ceiling) )
+                (PP-LOC (IN on) 
+                  (NP (NN government) (NN debt) ))))))))
+    (. .) ))

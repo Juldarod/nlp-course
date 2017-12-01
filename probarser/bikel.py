@@ -24,7 +24,7 @@ def parse(input_text):
                                   '~/pycharm-2017.2.3/lib/jna.jar'
                                   ' -Dparser.settingsFile='
               + dirname + '/dbparser/probarser/settings/collins.properties danbikel.parser.Parser '
-                          '-is ' + dirname + '/wsj-02-21/probarser/wsj-02-21.obj.gz'
+                          '-is ' + dirname + '/training/probarser/wsj-02-21.obj.gz'
                                              ' -sa ' + input_filename +
               ' -out ' + dirname + '/output/probarser/output_bikel.txt')
 
@@ -41,6 +41,6 @@ def parse(input_text):
 # os.chdir(dirname + '/dbparser/probarser/bin')
 # os.system('tcsh parse 400 '
 #           + dirname + '/dbparser/probarser/settings/collins.properties '
-#           + dirname + '/wsj-02-21/probarser/wsj-02-21.obj.gz \\'
+#           + dirname + '/training/probarser/training.obj.gz \\'
 #           + dirname + '/input/probarser/input_bikel.txt')
 # parse('((My (PRP$)) (dog (NN)) (also (RB)) (likes (VBZ)) (eating (VBG)) (sausage (NN)) (. (.)))')

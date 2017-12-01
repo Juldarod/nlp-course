@@ -1,0 +1,19 @@
+
+( (S 
+    (NP-SBJ (NNP McDermott) (NNP International) (NNP Inc.) )
+    (VP (VBD said) 
+      (SBAR (-NONE- 0) 
+        (S 
+          (NP-SBJ (PRP$ its) (NNP Babcock) (CC &) (NNP Wilcox) (NN unit) )
+          (VP (VBD completed) 
+            (NP 
+              (NP (DT the) (NN sale) )
+              (PP (IN of) 
+                (NP (PRP$ its) (NNP Bailey) (NNP Controls) (NNP Operations) ))
+              (PP (TO to) 
+                (NP (NNP Finmeccanica) (NNP S.p) (. .) (NNP A.) ))
+              (PP (IN for) 
+                (NP 
+                  (QP ($ $) (CD 295) (CD million) )
+                  (-NONE- *U*) )))))))
+    (. .) ))

@@ -1,0 +1,23 @@
+
+( (S 
+    (NP-SBJ-1 
+      (NP (NNS Yields) )
+      (PP (IN on) 
+        (NP (JJ money-market) (JJ mutual) (NNS funds) )))
+    (VP (VBD continued) 
+      (S 
+        (NP-SBJ (-NONE- *-1) )
+        (VP (TO to) 
+          (VP (VB slide) )))
+      (, ,) 
+      (PP-LOC (IN amid) 
+        (NP (NNS signs) 
+          (SBAR (IN that) 
+            (S 
+              (NP-SBJ (NN portfolio) (NNS managers) )
+              (VP (VBP expect) 
+                (NP 
+                  (NP (JJ further) (NNS declines) )
+                  (PP-LOC (IN in) 
+                    (NP (NN interest) (NNS rates) )))))))))
+    (. .) ))

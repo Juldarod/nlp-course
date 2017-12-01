@@ -1,1 +1,1 @@
-((My (PRP$)) (dog (NN)) (also (RB)) (likes (VBZ)) (eating (VBG)) (sausage (NN)) (. (.))) 
+((A (DT)) (form (NN)) (of (IN)) (asbestos (NN)) (once (RB)) (used (VBN)) (to (TO)) (make (VB)) (Kent (VBN)) (cigarette (NN)) (filters (NNS)) (has (VBZ)) (caused (VBN)) (a (DT)) (high (JJ)) (percentage (NN)) (of (IN)) (cancer (NN)) (deaths (NNS)) (among (IN)) (a (DT)) (group (NN)) (of (IN)) (workers (NNS)) (exposed (VBN)) (to (TO)) (it (PRP)) (more (RB)) (than (IN)) (30 (Z)) (years (NNS)) (ago (RB)) (, (Fc)) (researchers (NNS)) (reported (VBD)) (. (.))) 

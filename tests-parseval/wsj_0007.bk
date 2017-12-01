@@ -1,0 +1,25 @@
+(S
+  (NP (NNP McDermott) (NNP International) (NNP Inc.))
+  (VP
+    (VBD said)
+    (SBAR
+      (S
+        (NP (PRP$ its) (NN Babcock) (CC &) (NN Wilcox) (NN unit))
+        (VP
+          (VBD completed)
+          (NP
+            (NP (DT the) (NN sale))
+            (PP
+              (IN of)
+              (SBAR
+                (S
+                  (NP (PRP$ its) (NN Bailey))
+                  (VP
+                    (VBZ Controls)
+                    (NP
+                      (NAC
+                        (NNP Operations)
+                        (PP (TO to) (NP (NP (NN Finmeccanica))))
+                        (NNP S.))
+                      (NN p)))))))))))
+  (. .))

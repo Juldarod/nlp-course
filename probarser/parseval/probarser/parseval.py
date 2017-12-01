@@ -115,7 +115,7 @@ def parseval(files1, files2, argv):
 
     precision = precision / len(parts1)
     recall = recall / len(parts2)
-    crossing = crossing / len(parts1)
+    # crossing = crossing / len(parts1)
     pre1 = precision * 100
     re1 = recall * 100
     fscore = (2 * pre1 * re1) / (pre1 + re1)
@@ -123,10 +123,21 @@ def parseval(files1, files2, argv):
 
     print('########## TOTAL ##########')
     print('')
-    print('Average precision, recall,  cross brackets and F-score:')
-    print(pre1, re1, crossing, fscore)
+    print('Average precision, recall, and F-score:')
+    print(pre1, re1, fscore)
 
 
-input1 = '/home/juldini/Downloads/parseval/siembra'
-input2 = '/home/juldini/Downloads/parseval/wsj_0001.mrg'
-parseval(input1, input2, ['-i', '-s'])
+# input1 = '/home/juldini/PycharmProjects/nlp-course/tests-parseval/wsj_00010.st'
+# input1 = '/home/juldini/PycharmProjects/nlp-course/tests-parseval/wsj_0001.bk'
+# input2 = '/home/juldini/PycharmProjects/nlp-course/tests-parseval/wsj_00010.mrg'
+# parseval(input1, input2, ['-i', '-s'])
+
+for i in range(1, 11):
+    parseval('/home/juldini/PycharmProjects/nlp-course/tests-parseval/wsj_000%s.st' % i,
+             '/home/juldini/PycharmProjects/nlp-course/tests-parseval/wsj_000%s.mrg' % i,
+             [])
+
+for i in range(1, 11):
+    parseval('/home/juldini/PycharmProjects/nlp-course/tests-parseval/wsj_000%s.bk' % i,
+             '/home/juldini/PycharmProjects/nlp-course/tests-parseval/wsj_000%s.mrg' % i,
+             [])

@@ -1,0 +1,26 @@
+(S
+  (NP
+    (NP (NNP J.P.) (JJ Bolduc))
+    (, ,)
+    (NP
+      (NP (NN vice) (NN chairman))
+      (PP
+        (IN of)
+        (NP
+          (NP (NNP W.R.) (NNP Grace) (CC &) (NNP Co.))
+          (, ,)
+          (SBAR
+            (WHNP (WDT which))
+            (S
+              (VP
+                (VBZ holds)
+                (NP
+                  (DT a)
+                  (Zp 83.4_%)
+                  (NP (NN interest))
+                  (PP
+                    (IN in)
+                    (NP (DT this) (NNS energy-services) (NN company)))))))))))
+  (, ,)
+  (VP (VBD was) (VP (VBN elected) (S (NP (DT a) (NN director)))))
+  (. .))
