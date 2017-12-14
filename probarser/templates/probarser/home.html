@@ -18,7 +18,7 @@
 <div class="row">
     <div class="col-sm-12" style="text-align: left">
        <h2 style="font-size: 20px">
-           {{ pos }}
+           <b>{{ pos }}</b>
        </h2>
     </div>
 </div>
@@ -37,12 +37,12 @@
 <div class="row">
     <div class="col-sm-6" style="text-align: center">
         <h2 style="font-size: 20px">
-            {{ stanford }}
+            <b>{{ stanford }}</b>
         </h2>
     </div>
     <div class="col-sm-6" style="text-align: center">
         <h2 style="font-size: 20px">
-            {{ bikel }}
+            <b>{{ bikel }}</b>
         </h2>
     </div>
 </div>
@@ -69,6 +69,30 @@
         {% endfor %}
     </div>
 </div>
-
+<br>
+<div class="row">
+    <div class="col-sm-4">
+        <div style="text-align: center; line-height: 16px">
+            <h2 style="font-size: 20px">
+                <b>Precision:</b> {{ precision }}
+            </h2>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div style="text-align: center; line-height: 16px">
+            <h2 style="font-size: 20px">
+                <b>Recall:</b> {{ recall }}
+            </h2>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div style="text-align: center; line-height: 16px">
+            <h2 style="font-size: 20px">
+                <b>F-score:</b> {{ score }}
+            </h2>
+        </div>
+    </div>
+</div>
+<br>
 </div>
 {% endblock %}

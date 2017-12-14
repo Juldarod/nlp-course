@@ -19,12 +19,13 @@ class HomeView(TemplateView):
         form = InputForm(request.POST)
         if form.is_valid():
             query = Processing(form.cleaned_data["text"], self.analyzer)
-            trees = query.process(form.cleaned_data["text"])
-            stanford_draws = query.draw_trees(trees, 'stanford', 0)
-            bikel_draws = query.draw_trees(trees, 'bikel', 1)
-            args = {'form': form, 'tagging': query.input_text, 'pos': 'PoS Tagging',
-                    'stanford': 'Stanford Parser', 'bikel': 'Bikel Parser',
-                    'stanford_trees': zip(trees[0], stanford_draws),
-                    'bikel_trees': zip(trees[1], bikel_draws)
+            output_data = query.process(form.cleaned_data["text"])
+            stanford_draws = query.draw_trees(output_data, 'stanford', 0)
+            bikel_draws = query.draw_trees(output_data, 'bikel', 1)
+            args = {'form' : form, 'tagging' : query.input_text, 'pos' : 'PoS Tagging',
+                    'stanford' : 'Stanford Parser', 'bikel' : 'Bikel Parser',
+                    'stanford_trees' : zip(output_data[0], stanford_draws),
+                    'bikel_trees' : zip(output_data[1], bikel_draws),
+                    'precision' : output_data[2], 'recall' : output_data[3], 'score' : output_data[4]
                     }
             return render(request, self.template_name, args)

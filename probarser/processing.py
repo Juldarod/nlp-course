@@ -1,7 +1,18 @@
-import probarser.stanford
-import probarser.bikel
-import os, inspect
+import inspect
+import os
+
 from nltk.draw.tree import TreeView
+
+import probarser.bikel
+import probarser.stanford
+import probarser.parseval.probarser.parseval as pv
+
+
+def run_parseval():
+    dirname = os.path.dirname(os.path.abspath(inspect.stack()[0][1]))
+    stanford = os.path.join(dirname, 'output', 'probarser', 'output_stanford.txt')
+    bikel = os.path.join(dirname, 'output', 'probarser', 'output_bikel.txt')
+    return pv.parseval(stanford, bikel, [])
 
 
 def process_to_stanford(input_text):
@@ -19,7 +30,8 @@ class Processing(object):
     def process(self, input_text):
         stanford = process_to_stanford(input_text)
         bikel = process_to_bikel(self.input_text)
-        return [stanford, bikel]
+        parseval = run_parseval()
+        return [stanford, bikel, parseval[0], parseval[1], parseval[2]]
 
     def draw_trees(self, tree, parser, n):
         dirname = os.path.dirname(os.path.abspath(inspect.stack()[0][1]))

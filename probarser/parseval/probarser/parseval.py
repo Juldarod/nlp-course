@@ -121,23 +121,24 @@ def parseval(files1, files2, argv):
     fscore = (2 * pre1 * re1) / (pre1 + re1)
     # fscore es la media armónica entre LP y LR.
 
-    print('########## TOTAL ##########')
-    print('')
-    print('Average precision, recall, and F-score:')
-    print(pre1, re1, fscore)
+    # print('########## TOTAL ##########')
+    # print('')
+    # print('Average precision, recall, and F-score:')
+    # print(pre1, re1, fscore)
+    return [pre1, re1, fscore]
 
 
 # input1 = '/home/juldini/PycharmProjects/nlp-course/tests-parseval/wsj_00010.st'
 # input1 = '/home/juldini/PycharmProjects/nlp-course/tests-parseval/wsj_0001.bk'
 # input2 = '/home/juldini/PycharmProjects/nlp-course/tests-parseval/wsj_00010.mrg'
 # parseval(input1, input2, ['-i', '-s'])
-
-for i in range(1, 11):
-    parseval('/home/juldini/PycharmProjects/nlp-course/tests-parseval/wsj_000%s.st' % i,
-             '/home/juldini/PycharmProjects/nlp-course/tests-parseval/wsj_000%s.mrg' % i,
-             [])
-
-for i in range(1, 11):
-    parseval('/home/juldini/PycharmProjects/nlp-course/tests-parseval/wsj_000%s.bk' % i,
-             '/home/juldini/PycharmProjects/nlp-course/tests-parseval/wsj_000%s.mrg' % i,
-             [])
+#
+# for i in range(1, 11):
+#     parseval('/home/juldini/PycharmProjects/nlp-course/tests-parseval/wsj_000%s.st' % i,
+#              '/home/juldini/PycharmProjects/nlp-course/tests-parseval/wsj_000%s.mrg' % i,
+#              [])
+#
+# for i in range(1, 11):
+#     parseval('/home/juldini/PycharmProjects/nlp-course/tests-parseval/wsj_000%s.bk' % i,
+#              '/home/juldini/PycharmProjects/nlp-course/tests-parseval/wsj_000%s.mrg' % i,
+#              [])
